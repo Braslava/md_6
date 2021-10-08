@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>MD6</title>
+</head>
+<body>
+    <div class="main">
+        <div image-container>
+            <img src="assets/image_man_at_desk.png" alt="man at desk">
+        </div>
+            <form class="form">
+                <button class="button button--red">Sign in with Google</button>
+                <button class="button button--black">Sign in with Apple</button>
+                <hr class="h-rule--with-text">
+                <input class="form__input" type="email" placeholder="Email address" required>
+                <input class="form__input" type="password" placeholder="Password" required>
+                <input class="form__input" type="text" placeholder="First Name" required>
+                <input class="form__input" type="text" placeholder="Last Name" required>
+                <input class="form__input-radio" type="radio" name="gender" value="female" id="female" required>
+                <label class="form__label" for="female">Female</label>
+                <input class="form__input-radio" type="radio" name="gender" value="male" id="male" required>
+                <label class="form__label" for="male">Male</label>
+                <span class="form__date-holder">
+                    <input type="date" placeholder="Date of birth" value="" 
+                        min = "1910-01-01" max="2020-01-01" required>
+                </span>
+                <select class="select" name="country" id="country" required>
+                    <option value="" disabled selected>Country</option>
+                    <option value="EE">Estonia</option>
+                    <option value="LV">Latvia</option>
+                    <option value="LT">Lithuania</option>
+                </select>
+                
+                <button class="button button--black">Join us &#8594</button>
+        </div>
+
+        
+    </div>
+    
+</body>
+</html>

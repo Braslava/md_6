@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', sans-serif;
+}
+.main {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.h-rule--with-text {
+    border: none;
+    border-top: 1px solid #11111333;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+    padding: 0 px;
+    margin: 15px 10px;
+
+}
+
+.h-rule--with-text:after {
+    background: #fff;
+    content: 'or';
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+}
+
+.button {
+    font-family: 'Inter', sans-serif;
+    color: white; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 4px;
+}
+
+.button--black {
+    background-color: #000000;
+}
+
+.button--red {
+    background-color: #D7503F;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    gap: 8px; 
+    padding: 20px;
+}
+
+.image-container{
+    display: flex;
+
+}
+
+
+.form__input {
+    padding: 5px;
+    border: 1px solid rgb(238, 232, 232); 
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.form__input-radio {
+    display: inline-flex;
+}
+
+.form__label {
+    display: inline-flex;
+}
+
+.select {
+    padding: 5px;
+    border: 1px solid rgb(238, 232, 232); 
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+.form__date-holder {
+    padding: 5px;
+    border: 1px solid rgb(238, 232, 232); 
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+}
