@@ -4,34 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/85cd353cd8.js" crossorigin="anonymous"></script>    
     <link rel="stylesheet" href="styles.css">
     <title>MD6</title>
 </head>
 <body>
-    <div class="main">
+    <div class="main-container">
         <div image-container>
             <img src="assets/image_man_at_desk.png" alt="man at desk">
         </div>
-            <div class="container">
-                <button class="button button--red">Sign in with Google</button>
-                <button class="button button--black">Sign in with Apple</button>
+            <div class="container--secondary">
+                <button class="button button--red"><i class="fab fa-google"></i>&nbsp; Sign in with Google</button>
+                <button class="button button--black"><i class="fab fa-apple"></i>&nbsp; Sign in with Apple</button>
+                <hr class="h-rule--with-text">
            
                 <form class="form">
-                    <hr class="h-rule--with-text">
+                   
                     <input class="form__input" type="email" placeholder="Email address" required>
                     <input class="form__input" type="password" placeholder="Password" required>
                     <input class="form__input" type="text" placeholder="First Name" required>
                     <input class="form__input" type="text" placeholder="Last Name" required>
-                    <div class="form__checkbox-container">
-                        <input class="form__input-radio" type="radio" name="gender" value="female" id="female" required>
-                        <label class="form__label" for="female">Female</label>
-                        <input class="form__input-radio" type="radio" name="gender" value="male" id="male" required>
-                        <label class="form__label" for="male">Male</label>
-                    </div>
-                    <span class="form__date-holder">Date of birth 
-                        <input type="date" placeholder="Date of birth" value="" 
+                   
+                    <input class="form__input-radio" type="radio" name="gender" value="female" id="female" required>
+                    <label class="form__label" for="female">Female</label>
+                    <input class="form__input-radio" type="radio" name="gender" value="male" id="male" required>
+                    <label class="form__label" for="male">Male</label>
+                    
+                    <div class="form__date-container"> 
+                        <label class="form__label--date" for="birth-date">Date of birth</label>  
+                        <input type="date" class="form__date" id="birth-date" placeholder="" value=" " 
                             min = "1910-01-01" max="2020-01-01" required>
-                    </span>
+                        
+                        
+                    </div>
                     <select class="form__select" name="country" id="country" required>
                         <option value="" disabled selected>Country</option>
                         <option value="EE">Estonia</option>
@@ -40,11 +45,11 @@
                     </select>
                         <div class="form__checkbox-container">
                         <input class="form__checkbox" type="checkbox" id="" value="yes-newsletter"> 
-                        <label for="newsletter">Subscribe to News</label>
+                        <label for="newsletter">Subscribe to news</label>
                         <input class="form__checkbox" type="checkbox" id="devil" value="soul">
                         <label for="devil">Sell your soul to the devil</label>
                     </div>
-                    <button class="button button--black">Join us &#8594</button>
+                    <button class="button button--black form__button">Join us &#8594</button>
                 </form>
                 <p class="form__paragraph">Already a member? <a class="form__link" href="">Sign in</a></p>
              </div>

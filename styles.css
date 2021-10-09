@@ -5,22 +5,28 @@ html {
 }
 body {
     font-family: 'Inter', sans-serif;
-    margin: 0 30px
     
 }
-.main {
+.main-container {
     display: grid;
     grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "sidebar content";
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.container {
+.container--secondary {
+    grid-area: content;
     display: flex;
-    justify-content: center;
+    justify-content: stretch;
     flex-flow: column wrap;
-    margin: 0 20px;
+    margin: 20px 20px;
     padding: 20px;
     max-width: 500px;
-    gap: 15px
+    gap: 15px;
 }
 
 .h-rule--with-text {
@@ -50,6 +56,8 @@ body {
     border-radius: 4px;
 }
 
+
+
 .button--black {
     background-color: #000000;
 }
@@ -61,13 +69,13 @@ body {
 .form {
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
+    grid-template-columns: auto 1fr auto 1fr;
+    gap: 15px 10px;
     align-items: stretch;
 }
 
 .image-container{
-    display: flex;
+    grid-area: sidebar;
 
 }
 
@@ -77,6 +85,7 @@ body {
     border: 1px solid rgb(238, 232, 232); 
     border-radius: 4px;
     font-size: 16px;
+    grid-column: span 4;
 }
 
 .form__input-radio {
@@ -93,25 +102,36 @@ body {
     border-radius: 4px;
     font-size: 16px;
     font-family: 'Inter', sans-serif;
-    
+    grid-column: span 4;
 }
 
 .form__select:disabled {
     color: #11111399;
 }
 
-.form__date-holder {
+.form__date-container {
     padding: 10px;
     border: 1px solid rgb(238, 232, 232); 
     border-radius: 4px;
     font-size: 16px;
+    grid-column: span 4;
+    display: flex;
+    justify-content: space-between;
 }
 
+.form__date {
+    border:none;
+}
+
+.form__label--date {
+    color: #11111399;
+}
 .form__paragraph{
     text-align: center;
     font-size: 16px;
     line-height: 140%;
     color: rgba(17, 17, 19, 0.6);
+    grid-column: span 4;
 }
 
 .form__link {
@@ -124,8 +144,36 @@ body {
     grid-template-columns: auto 1fr auto 1fr;
     padding: 8px 0;
     gap: 5px; 
+    grid-column: span 4;
+}
+
+.form__input-radio {
+    grid-column: 1/1;
+    
+}
+
+.form__label{
+    grid-column: 2/3;
+    color: #111113;
 }
 
 .form__checkbox {
     padding: 5px;
+}
+
+.form__button {
+    grid-column: span 4;
+}
+
+.button:focus {
+    outline: 2px solid blue;
+    cursor: pointer; 
+}
+
+.button:hover {
+    outline: 2px solid blue;
+    cursor: pointer; 
+}
+.form__input:hover,.form__checkbox:hover, .form__date-container:hover, .form__select:hover {
+    background-color: lightblue;
 }
