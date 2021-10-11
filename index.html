@@ -11,7 +11,7 @@
 <body>
     <div class="main-container">
         <div image-container>
-            <img src="assets/image_man_at_desk.png" alt="man at desk">
+            <img class="image" src="assets/image_man_at_desk.png" alt="man at desk">
         </div>
             <div class="container--secondary">
                 <button class="button button--red"><i class="fab fa-google"></i>&nbsp; Sign in with Google</button>
@@ -25,30 +25,42 @@
                     <input class="form__input" type="text" placeholder="First Name" required>
                     <input class="form__input" type="text" placeholder="Last Name" required>
                    
-                    <input class="form__input-radio" type="radio" name="gender" value="female" id="female" required>
-                    <label class="form__label" for="female">Female</label>
-                    <input class="form__input-radio" type="radio" name="gender" value="male" id="male" required>
-                    <label class="form__label" for="male">Male</label>
+                    <label class="radio" for="customRadioButton1">
+                        <input class="radio__input" type="radio" name="gender" value="female" id="customRadioButton1" required>
+                        <div class="radio__box"></div>
+                        Female
+                    </label>
+                    <label class="radio" for="customRadioButton2">
+                        <input class="radio__input" type="radio" name="gender" value="male" id="customRadioButton2" required>
+                        <div class="radio__box"></div>
+                        Male
+                    </label>
                     
-                    <div class="form__date-container"> 
-                        <label class="form__label--date" for="birth-date">Date of birth</label>  
-                        <input type="date" class="form__date" id="birth-date" placeholder="" value=" " 
-                            min = "1910-01-01" max="2020-01-01" required>
+                   
+                    <label class="form__date-container" for="birth-date">
+                        Date of birth
+                        <input type="date" class="form__date" id="birth-date" min = "1910-01-01" max="2020-01-01" required>
+                        </label>  
                         
                         
-                    </div>
+                 
                     <select class="form__select" name="country" id="country" required>
                         <option value="" disabled selected>Country</option>
                         <option value="EE">Estonia</option>
                         <option value="LV">Latvia</option>
                         <option value="LT">Lithuania</option>
                     </select>
-                        <div class="form__checkbox-container">
-                        <input class="form__checkbox" type="checkbox" id="" value="yes-newsletter"> 
-                        <label for="newsletter">Subscribe to news</label>
-                        <input class="form__checkbox" type="checkbox" id="devil" value="soul">
-                        <label for="devil">Sell your soul to the devil</label>
-                    </div>
+                        <label class="checkbox" for="myCheckbox"> 
+                            <input class="checkbox__input" type="checkbox" name="newsletter" id="myCheckbox">
+                            <div class="checkbox__box"></div>
+                            Subscribe to news
+                        </label> 
+                        <label class="checkbox" for="myCheckbox2"> 
+                            <input class="checkbox__input" type="checkbox" name="newsletter" id="myCheckbox2" checked>
+                            <div class="checkbox__box"></div>
+                            Sell your soul to the devil
+                        </label> 
+                        
                     <button class="button button--black form__button">Join us &#8594</button>
                 </form>
                 <p class="form__paragraph">Already a member? <a class="form__link" href="">Sign in</a></p>
