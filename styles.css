@@ -9,7 +9,7 @@ body {
 }
 .main-container {
     display: grid;
-    grid-template-columns: auto minmax(250px, 1fr);
+    grid-template-columns: auto minmax(350px, 1fr);
     grid-template-rows: auto;
     grid-template-areas: 
         "sidebar content";
@@ -222,7 +222,7 @@ body {
 }
 
 .radio__box::after {
-    content: '\2022';
+    content: '\2022';      /*url(assets/Rectangle\ 23.png); */
     font-size: 25px;
     color: white;
     transform: scale(0);
@@ -260,7 +260,7 @@ body {
 .form__input:focus, .form__date-container:focus, .form__select:focus, .form__input-radio:focus {
     background-color: #CCCCCC;
     border: none;
-    outline: 2px solid #F9DADA;
+    outline: 2px solid #4b484888;
 }
 
 .form__date:focus, .form__date:hover {
@@ -268,5 +268,39 @@ body {
     outline: none;
 }
 
+@media only screen and (max-width: 600px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "sidebar"
+        "content";
+    }
+    
+}
 
+/*
+.radio__checkmark {
+    background: transparent;
+    display: inline-flex;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+}
 
+.radio__input:hover + .radio__box {
+    background: #CCCCCC;
+    border-color: #CCCCCC; 
+}
+
+.radio__input:checked + .radio__box {
+    background: #EB5757;
+    border-color: #EB5757; 
+}
+
+.radio__input:checked + .radio__checkmark::after {
+    display: inline-flex;
+    background: white;
+
+}
+
+*/
